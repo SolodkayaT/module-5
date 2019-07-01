@@ -1,17 +1,7 @@
     @import url(./reset.css);
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:300,400,500,700,900&display=swap');
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
     body {
         font-size: 0;
-    }
-    
-    ul {
-        list-style: none;
     }
     /* LOGO AND MENU*/
     
@@ -19,7 +9,6 @@
         width: 1115px;
         margin: 0 auto;
         padding-top: 40px;
-        padding-bottom: 30px;
     }
     
     .logo a {
@@ -58,6 +47,7 @@
         float: right;
         padding: 0;
         margin: 0;
+        padding-bottom: 30px;
     }
     
     .navigation li:last-child {
@@ -108,14 +98,10 @@
     
     .navigation-slider-prew {
         background-image: url(../images/prew.png);
-        background-repeat: no-repeat;
-        background-position: center;
     }
     
     .navigation-slider-next {
         background-image: url(../images/next.png);
-        background-repeat: no-repeat;
-        background-position: center;
     }
     
     .slider-navigation {
@@ -123,18 +109,21 @@
         height: 601px;
     }
     
+    .navigation-slider-next,
     .navigation-slider-prew {
+        background-repeat: no-repeat;
+        background-position: center;
         position: absolute;
         top: 50%;
-        left: 0%;
         transform: translateY(-50%)
     }
     
+    .navigation-slider-prew {
+        left: 0%;
+    }
+    
     .navigation-slider-next {
-        position: absolute;
-        top: 50%;
         right: 0%;
-        transform: translateY(-50%);
     }
     
     .slider-header {
@@ -143,10 +132,6 @@
         color: #FFFFFF;
         font-weight: 900;
         font-size: 57px;
-    }
-    
-    .first-letter-in-slider-header {
-        color: #e57114;
     }
     
     .more-info-slider-header {
@@ -208,7 +193,7 @@
     }
     
     .product-list li:nth-last-child(-n+4) {
-        margin-bottom: 70px;
+        margin-bottom: 90px;
     }
     
     .item-name,
@@ -245,7 +230,9 @@
     }
     
     .overlay-hover-card {
-        display: none;
+        opacity: 0;
+        width: 256px;
+        height: 282px;
         background-image: url(../images/overlay-hover-card.png);
         position: absolute;
         left: 0;
@@ -261,7 +248,7 @@
     }
     
     .navigation-card {
-        display: none;
+        opacity: 0;
     }
     
     .btn-like,
@@ -318,11 +305,11 @@
     }
     
     .product-card:hover .navigation-card {
-        display: block;
+        opacity: 1;
     }
     
     .item-navigation-hover:hover .overlay-hover-card {
-        display: block;
+        opacity: 1;
     }
     
     .product-card:hover,
